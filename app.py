@@ -5,7 +5,6 @@ import requests
 import time
 from functools import lru_cache
 
-# Dictionary to cache API responses
 poster_cache = {}
 
 def fetch_poster(movie_id):
