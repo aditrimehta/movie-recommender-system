@@ -8,7 +8,6 @@ from functools import lru_cache
 # Dictionary to cache API responses
 poster_cache = {}
 
-
 def fetch_poster(movie_id):
     if movie_id in poster_cache:  # Check if result is already cached
         return poster_cache[movie_id]
@@ -26,7 +25,7 @@ def fetch_poster(movie_id):
         poster_cache[movie_id] = poster_url
         return poster_url
     except requests.ConnectionError as e:
-        st.error(f"Connection error: {e}")
+        #st.error(f"Connection error: {e}")
         return "https://via.placeholder.com/500x750?text=No+Connection"
 
 
